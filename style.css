@@ -1,0 +1,106 @@
+:root {
+    --main-blue: #0d6efd;
+}
+
+body {
+    background-color: var(--bs-body-bg);
+    color: var(--bs-body-color);
+}
+
+.navbar .navbar-brand {
+    color: var(--main-blue);
+}
+
+.navbar .nav-link {
+    color: var(--bs-body-color);
+}
+
+.navbar .nav-link:hover {
+    color: var(--main-blue);
+}
+
+[data-bs-theme="dark"] .navbar-toggler-icon {
+    filter: invert(1);
+}
+
+.section-space {
+    padding: 70px 0;
+}
+
+.hero-section {
+    background-color: var(--main-blue);
+    color: white;
+}
+
+.section-light {
+    background-color: #f4f4f4;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.info-card,
+.price-card,
+.contact-form,
+.testimonial-box {
+    padding: 25px;
+    border: 1px solid var(--bs-border-color);
+    border-radius: 10px;
+    background-color: var(--bs-tertiary-bg);
+}
+
+.info-card,
+.price-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.info-card:hover,
+.price-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.price-card ul {
+    min-height: 120px;
+    padding-left: 20px;
+    text-align: left;
+}
+
+.price-card {
+    text-align: center;
+}
+
+.popular-plan {
+    position: relative;
+    border: 4px solid var(--main-blue);
+    padding-top: 35px;
+}
+
+.popular-plan .badge {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 22px;
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+.testimonial-box {
+    background-color: inherit;
+    border: none;
+}
+
+.testimonial-box {
+    min-height: 180px;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+    border-radius: 50%;
+}
+
+[data-bs-theme="dark"] .section-light {
+    background-color: #252525;
+}

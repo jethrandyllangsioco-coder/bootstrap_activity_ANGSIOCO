@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 5</title>
+    <link rel="stylesheet" href="bootstrap5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="bootstrap5/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg bg-body sticky-top border-bottom">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">
+                <i class="bi bi-bootstrap-fill" aria-hidden="true"></i> Bootstrap Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-label="Open navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item ms-lg-2">
+                        <button class="btn btn-outline-secondary" id="themeButton" type="button" aria-label="Switch to dark mode">
+                            <i class="bi bi-moon-fill"></i>
+                        </button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero-section section-space">
+            <div class="container text-center">
+                <span class="badge bg-white text-primary rounded-pill px-3 py-2 mb-3">Version 5.3.8</span>
+                <h1 class="display-4 fw-bold">Build fast, responsive sites with Bootstrap</h1>
+                <p class="lead mx-auto hero-text">Powerful, extensible, and feature-packed frontend toolkit. 
+                    Build and customize with Sass, utilize prebuilt grid system and components, 
+                    and bring projects to life with powerful JavaScript plugins.
+                </p>
+                <div class="mt-4">
+                    <a href="#pricing" class="btn btn-light text-primary btn-lg me-2 fw-bold">
+                        Get Started
+                    </a>
+                    <a href="bootstrap-5.3.8-dist.zip" download class="btn btn-primary text-white border border-white btn-lg" id="downloadButton">
+                        Download Bootstrap 5.3.8
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="section-space section-light">
+            <div class="container text-center">
+                <h2>Powerful Features</h2>
+                <p>Simple features for a better streaming experience.</p>
+                <div class="row g-4 mt-2 justify-content-center">
+                    <div class="col-md-4">
+                        <article class="info-card h-100">
+                            <h3>Dark Mode Ready</h3>
+                            <p>Switch between light and dark themes using the button in the navigation bar.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="info-card h-100">
+                            <h3>Mobile Ready</h3>
+                            <p>The Bootstrap grid helps the page adjust to phones, tablets, and desktops.</p>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="info-card h-100">
+                            <h3>Easy to Use</h3>
+                            <p>Clear navigation and simple controls make it easy to find something to watch.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="section-space">
+            <div class="container text-center">
+                <h2>Choose a Plan</h2>
+                <p>Pick the plan that fits your business needs.</p>
+                <div class="row g-4 mt-2 justify-content-center">
+                    <div class="col-sm-6 col-lg-3">
+                        <article class="price-card h-100">
+                            <h3>Free</h3>
+                            <h4>₱0.00/month</h4>
+                            <ul>
+                                <li>&check; 1 project</li>
+                                <li>&check; Community support</li>
+                                <li>&cross; Custom Domain</li>
+                            </ul>
+                            <button class="btn btn-outline-primary choose-plan" type="button">Choose plan</button>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <article class="price-card popular-plan h-100">
+                            <span class="badge bg-primary rounded-pill mb-3">Most Popular</span>
+                            <h3>Pro Developer</h3>
+                            <h4>₱49.00/month</h4>
+                            <ul>
+                                <li>&check; Unlimited projects</li>
+                                <li>&check; Priority support</li>
+                                <li>&check; Custom Domain</li>
+                            </ul>
+                            <button class="btn btn-primary choose-plan" type="button">Choose plan</button>
+                        </article>
+                    </div>
+                    <div class="col-sm-6 col-lg-3">
+                        <article class="price-card h-100">
+                            <h3>Enterprise</h3>
+                            <h4>₱109.00/month</h4>
+                            <ul>
+                                <li>&check; Dedicated Server</li>
+                                <li>&check; 24/7 Phone Support</li>
+                                <li>&check; SLA Guarantee</li>
+                            </ul>
+                            <button class="btn btn-outline-primary choose-plan" type="button">Choose plan</button>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="section-space section-light">
+            <div class="container text-center">
+                <h2>What People Say</h2>
+                <div id="testimonialCarousel" class="carousel slide mt-4" data-bs-ride="carousel" data-bs-interval="5000">
+                    <div class="carousel-inner testimonial-box">
+                        <div class="carousel-item active">
+                            <h3>Patrick Jane</h3>
+                            <p>“Bootstrap 5 made my website responsive without writing everything from the beginning.”</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Teresa Lisbon</h3>
+                            <p>“The Bootstrap grid helped me arrange my website for phones, tablets, and desktops.”</p>
+                        </div>
+                        <div class="carousel-item">
+                            <h3>Kimball Cho</h3>
+                            <p>“Bootstrap components made it easier to create my navbar, cards, buttons, and carousel.”</p>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-space">
+            <div class="container">
+                <div class="row justify-content-center"><div class="col-md-8 col-lg-6">
+                    <h2 class="text-center">Contact Us</h2>
+                    <p class="text-center">Send a question or some feedback.</p>
+                    <form id="contactForm" class="contact-form">
+                        <label class="form-label" for="name">Name</label>
+                        <input class="form-control mb-3" type="text" id="name" name="name" required>
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-control mb-3" type="email" id="email" name="email" required>
+                        <label class="form-label" for="message">Message</label>
+                        <textarea class="form-control mb-3" id="message" name="message" rows="4" required></textarea>
+                        <button class="btn btn-primary" type="submit">Submit</button>
+                    </form>
+                </div></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-dark text-white text-center p-3">
+        <p class="mb-0">Netflix & Chips &copy; 2026</p>
+        <a class="text-white" href="#home">Back to top</a>
+    </footer>
+
+    <script>
+        // Change the Bootstrap theme when the button is clicked.
+        const themeButton = document.getElementById('themeButton');
+        themeButton.addEventListener('click', function () {
+            const html = document.documentElement;
+            const darkMode = html.getAttribute('data-bs-theme') === 'dark';
+            html.setAttribute('data-bs-theme', darkMode ? 'light' : 'dark');
+            themeButton.innerHTML = darkMode ? '<i class="bi bi-moon-fill"></i>' : '<i class="bi bi-sun-fill"></i>';
+            themeButton.setAttribute('aria-label', darkMode ? 'Switch to dark mode' : 'Switch to light mode');
+        });
+
+        // A small security event example for the assignment.
+        document.addEventListener('contextmenu', function (event) {
+            event.preventDefault();
+            Swal.fire('Right-click disabled', 'Please use the page buttons and links.', 'warning');
+        });
+    </script>
+
+</body>
+</html>
